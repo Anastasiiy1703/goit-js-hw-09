@@ -28,10 +28,7 @@ const options = {
 };
 
 flatpickr("#datetime-picker", options);
-
 elements.startBtn.addEventListener('click', handlarClick);
-
-
 function handlarClick() {
     const futureDate = new Date(elements.input.value).getTime();
     const interval = setInterval(() => {
