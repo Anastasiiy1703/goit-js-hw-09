@@ -7,12 +7,26 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background: rgba(245, 245, 220, 1) ;
   color: #212121;
   line-height: 1.5;
-}
+
+ }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+.timer{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.value{
+  color:brown
+}
+.label{
+  color: burlywood;
 }
