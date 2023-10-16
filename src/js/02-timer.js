@@ -10,7 +10,7 @@ const elements = {
     minutes: document.querySelector("[data-minutes]"),
     seconds: document.querySelector("[data-seconds]")
 }
-let timerId = null;
+ elements.startBtn.disabled = true;
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -33,7 +33,7 @@ function handlarClick() {
     const futureDate = new Date(elements.input.value).getTime();
     const interval = setInterval(() => {
         const currentTime = new Date().getTime();
-        const remainingTime = futureDate - currentTime;
+      const remainingTime = futureDate - currentTime;
         if (remainingTime < 0) {
             clearInterval(interval);
             return;
@@ -60,7 +60,3 @@ function convertMs(ms) {
   const seconds = Math.floor((((ms % day) % hour) % minute) / second);
   return { days, hours, minutes, seconds };
 }
-
-
-
-

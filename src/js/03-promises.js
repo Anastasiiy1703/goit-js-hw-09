@@ -20,10 +20,14 @@ function handlerPromise(event) {
   for (let i = 0; i < amount; i+=1) {
     createPromise(i + 1, currentDelay)
       .then(({ position, delay }) => {
-        Notiflix.Notify.failure(`✅ Fulfilled promise ${position} in ${delay}ms`);
+        setTimeout(() => {
+          Notiflix.Notify.failure(`✅ Fulfilled promise ${position} in ${delay}ms`);
+        }, delay);
       })
       .catch(({ position, delay }) => {
-        Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
+        setTimeout(() => {
+          Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
+        }, delay);
       });
     currentDelay += step;
   }
